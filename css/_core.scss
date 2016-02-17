@@ -1,0 +1,30 @@
+*{
+  margin:0;
+  padding:0;
+  clear:both;
+  box-sizing:border-box;
+}
+
+body{
+  background: yellow;
+}
+.container{
+  width:90%;
+  margin:0 auto;
+}
+.content{
+  .left,
+  .right{
+    display:inline-block;
+    vertical-align:top;
+  }
+  .left{
+    width:29%;
+  }
+  .right{
+    width:65%;
+  }
+}
+.content{
+  margin-top:20px;
+}
