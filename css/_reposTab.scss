@@ -1,10 +1,48 @@
 .searchAndFilter{
   position:relative;
   padding:15px 0;
+  border-bottom:1px solid #e5e5e5;
 }
 .repoSearch{
   display:inline-block;
-  width:30%;
+  width:50%;
+  input[type="search"] {
+    min-height: 20px;
+    width:260px;
+    padding: 7px 8px;
+    font-size: 13px;
+    color: #333;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  }
+  button {
+    position: relative;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+    background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+  }
 }
 .repoFilter{
   display:inline-block;
@@ -12,15 +50,35 @@
   li{
     display:inline;
     list-style:none;
+    font-size:14px;
   }
 }
 .newRepo{
   display:inline-block;
   position:absolute;
   right:0;
+  button{
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+      background-color: #60b044;
+      background-image: -webkit-linear-gradient(#8add6d, #60b044);
+      background-image: linear-gradient(#8add6d, #60b044);
+      position: relative;
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 20px;
+      white-space: nowrap;
+      vertical-align: middle;
+      border: 1px solid #5ca941;
+      border-radius: 3px;
+      -webkit-user-select: none;
+  }
 }
 .repoData {
-    padding: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
 }
 .repoTitle{
   margin: 0 0 8px;
@@ -28,22 +86,38 @@
   line-height: 1.2;
   font-weight: bold;
 }
-
+.repoTime{
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 13px;
+  color: #888;
+}
+.repoDescription{
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #666;
+}
 .repoStackLeft {
-    width: 75%;
-    display: inline-block;
+  width: 75%;
+  display: inline-block;
 }
 .repoStackRight {
-    width: 25%;
-    display: inline-block;
-    vertical-align:top;
-    position:relative;
+  width: 25%;
+  display: inline-block;
+  vertical-align:top;
+  position:relative;
     li{
       list-style:none;
       display:inline;
+      padding-right: 10px;
     }
 }
 .stats {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #888;
 }
