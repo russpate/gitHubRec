@@ -1,4 +1,6 @@
-var eventData = [
+var eventData =
+
+[
 {
 id: "3656126199",
 type: "CreateEvent",

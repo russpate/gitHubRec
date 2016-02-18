@@ -4,12 +4,16 @@
   clear:both;
   box-sizing:border-box;
 }
-
 body{
-  background: yellow;
+  background: white;
+  color:#333;
+}
+a{
+  color:#4078c0;
+  text-decoration:none;
 }
 .container{
-  width:90%;
+  width:80%;
   margin:0 auto;
 }
 .content{
@@ -19,10 +23,10 @@ body{
     vertical-align:top;
   }
   .left{
-    width:29%;
+    width:23%;
   }
   .right{
-    width:65%;
+    width:75.5%;
   }
 }
 .content{

@@ -1,4 +1,5 @@
-var userData = {
+var userData =
+{
 login: "russpate",
 id: 5562260,
 avatar_url: "https://avatars.githubusercontent.com/u/5562260?v=3",

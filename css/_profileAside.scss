@@ -1,5 +1,32 @@
 .profileAsideWrap{
   width:100%;
-  background-color:blue;
-  height:1000px;
+}
+.avatar{
+  img{
+    width:100%;
+    border-radius:5px;
+  }
+}
+.userName{
+  font-size: 26px;
+  line-height: 30px;
+  font-weight:bold;
+}
+.atName{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666;
+}
+.specialLinksWrapper{
+  margin:10px 0;
+  padding:20px 0;
+  border-top:1px solid;
+  border-bottom:1px solid;
+}
+a{
+  &:hover{
+    text-decoration:underline;
+  }
 }

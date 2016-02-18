@@ -1,20 +1,28 @@
 header{
-  margin:0 auto;
-  background-color:#f5f5f5;
-  border-bottom: 1px solid #e5e5e5;
-
   nav{
-    width:90%;
-    margin:0 auto;
+    background-color:#f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
     padding:10px 0;
-    }
+    position: relative;
+  }
+  .navWrap{
+    margin:0 auto;
+    width:80%;
+    position:relative;
+  }
 
   .navRight{
-    width:15.5%;
+    position:absolute;
+    right:0;
   }
 
   .navLeft{
     width:80%;
+
+    span {
+    font-size: 13px;
+    font-weight: 600;
+    }
   }
 
   .navRight,
@@ -26,20 +34,25 @@ header{
   li{
     display:inline-block;
     list-style:none;
+    margin-right:17px;
   }
 
   .octicon{
     &.octicon-mark-github{
       font-size:28px;
+      vertical-align:middle;
     }
     &.octicon-triangle-down {
       font-size: 10px;
+    }
+    &.octicon-plus{
+      margin-right:5px;
     }
   }
 
   .gitSearch{
     display: inline-block;
-    width: 250px;
+    width: 360px;
     min-height: 22px;
     padding: 3px 5px;
     font-size: 12px;
@@ -60,13 +73,8 @@ header{
   .littleAv{
     img{
       width:20px;
+      margin-right:5px;
     }
   }
 
 }
-.tabs{
-    li{
-      display:inline-block;
-      list-style:none;
-    }
-  }
