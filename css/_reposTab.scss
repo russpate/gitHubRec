@@ -1,0 +1,21 @@
+.searchAndFilter{
+  position:relative;
+  padding:15px 0;
+}
+.repoSearch{
+  display:inline-block;
+  width:30%;
+}
+.repoFilter{
+  display:inline-block;
+  width:40%;
+  li{
+    display:inline;
+    list-style:none;
+  }
+}
+.newRepo{
+  display:inline-block;
+  position:absolute;
+  right:0;
+}

@@ -7,6 +7,12 @@
     border-radius:5px;
   }
 }
+.userNameWrapper {
+    margin-top: 10px;
+}
+.atNameWrapper{
+  margin-bottom:20px;
+}
 .userName{
   font-size: 26px;
   line-height: 30px;
@@ -22,8 +28,14 @@
 .specialLinksWrapper{
   margin:10px 0;
   padding:20px 0;
-  border-top:1px solid;
-  border-bottom:1px solid;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  font-size: 14px;
+  line-height: 24px;
+  span.octicon {
+    color: #B7B7B7;
+    margin-right:5px;
+  }
 }
 a{
   &:hover{
