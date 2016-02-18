@@ -287,6 +287,8 @@ header .littleAv img {
     list-style: none;
     display: inline;
     padding-right: 10px; }
+    .repoStackRight li span {
+      padding-right: 3px; }
 
 .stats {
   position: absolute;
