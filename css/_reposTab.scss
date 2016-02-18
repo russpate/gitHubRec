@@ -19,3 +19,31 @@
   position:absolute;
   right:0;
 }
+.repoData {
+    padding: 20px 0;
+}
+.repoTitle{
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.repoStackLeft {
+    width: 75%;
+    display: inline-block;
+}
+.repoStackRight {
+    width: 25%;
+    display: inline-block;
+    vertical-align:top;
+    position:relative;
+    li{
+      list-style:none;
+      display:inline;
+    }
+}
+.stats {
+    position: absolute;
+    right: 0;
+}
