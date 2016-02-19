@@ -2,7 +2,6 @@
   width:100%;
   position:relative;
   border-bottom: 1px solid #eee;
-  padding:5px 0;
   button{
     position: relative;
     right:0;
@@ -39,12 +38,14 @@
       display:inline-block;
       list-style:none;
       margin-right: 20px;
-      color:#666;
       font-size:14px;
       vertical-align:middle;
       // border:1px solid;
       // border-bottom:transparent;
       // border-radius:3px 3px 0 0;
       padding:10px;
+      a{
+        text-decoration:none;
+      }
     }
   }

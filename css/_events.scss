@@ -1,0 +1,25 @@
+.section{
+  display:none;
+}
+.active{
+  display:block;
+}
+
+.tab{
+  margin-bottom:-1px;
+  a{
+    color:gray;
+  }
+}
+
+.activeTab{
+  border: 1px solid #eee;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid white;
+  background-color: white;
+  border-bottom: 0;
+  margin-bottom:-1px;
+  a{
+    color:#333;
+  }
+}

@@ -84,12 +84,12 @@
             <div class="tabsWrapper">
               <div class="tabsLeft">
                 <ul>
-                  <li href=""><span class="octicon octicon-diff-added"></span>
-                    Contributions</li>
-                  <li href=""><span class="octicon octicon-repo"></span>
-                    Repositories</li>
-                  <li href=""><span class="octicon octicon-rss"></span>
-                    Public Activity</li>
+                  <li class="tab" rel="contributions"><a href="#"><span class="octicon octicon-diff-added"></span>
+                    Contributions</a></li>
+                  <li class="tab activeTab" rel="repo"><a href="#"><span class="octicon octicon-repo"></span>
+                    Repositories</a></li>
+                  <li class="tab" rel="public"><a href="#"><span class="octicon octicon-rss"></span>
+                    Public Activity</a></li>
                 </ul>
               </div>
               <div class="tabsRight">
@@ -99,7 +99,7 @@
 
             </div>
             <div class="dynamicContentWrapper">
-              <div class="reposTabWrap">
+              <div class="repo section active">
                 <div class="reposTab">
                   <div class="searchAndFilterWrap">
                     <div class="searchAndFilter">
@@ -124,9 +124,13 @@
                     </div>
                   </div>
                   <div class="repoDataWrap">
-
                   </div>
                 </div>
+              </div>
+              <div class="public section">
+
+                <h1>Page Content</h1>
+
               </div>
             </div>
           </div>
