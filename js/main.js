@@ -74,9 +74,8 @@ $('.repoDataWrap').append(fullRepoData);
 //
 var allActivity = "";
 _.each(eventData, function(activity){
-  if (activity.type === "create" && activity.payload.ref_type === "branch"){
-    allActivity +=
-    "<div class='wrap createBranch'>"
+  if (activity.type === "CreateEvent" && activity.payload.ref_type === "branch"){
+    allActivity += "<div class='wrap createBranch'>"
     + "<div class='event'>"
     + "<div class='icon'>"
     + "<span class='octicon octicon-git-branch dashboard-event-icon'></span>"
@@ -99,9 +98,8 @@ _.each(eventData, function(activity){
     + "</div>"//info
     + "</div>"//event wrapper
     + "</div>"//wrap createBranch
-  } else if (activity.type === "create" && activity.payload.ref_type === "repo") {
-    allActivity +=
-    "<div class='wrap createRepo'>"
+  } else if (activity.type === "CreateEvent" && activity.payload.ref_type === "repository") {
+    allActivity += "<div class='wrap createRepo'>"
     + "<div class='event'>"
     + "<div class='icon'>"
     + "<span class='octicon octicon-repo dashboard-event-icon'></span>"
@@ -124,9 +122,8 @@ _.each(eventData, function(activity){
     + "</div>"//actorInfo
     + "</div>"//event wrapper
     + "</div>"//wrap createRepo
-  } else if (activity.type === "push"){
-    allActivity +=
-    "<div class='wrap push'>"
+  } else if (activity.type === "PushEvent"){
+    allActivity += "<div class='wrap push'>"
     + "<div class='event'>"
     + "<div class='icon'>"
     + "<span class='octicon octicon-git-commit dashboard-event-icon'></span>"
@@ -168,6 +165,8 @@ _.each(eventData, function(activity){
     + "</div>"//wrap push
   }
 });
+
+console.log(allActivity);
 $('.public').append(allActivity);
 
 //
