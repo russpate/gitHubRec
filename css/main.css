@@ -49,10 +49,25 @@ a {
   .activeTab a {
     color: #333; }
 
-.create .actorAvatarBig {
+.push .actorAvatar {
   width: 50px; }
-  .create .actorAvatarBig img {
+  .push .actorAvatar img {
     width: 100%; }
+
+.pushDescription .actorAvatar img {
+  width: 50%; }
+
+.createRepo .icon,
+.createBranch .icon {
+  width: auto;
+  color: gray;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top; }
+
+.createRepo .actorInfo {
+  display: inline-block;
+  width: 80%; }
 
 .profileAsideWrap {
   width: 100%; }

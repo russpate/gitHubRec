@@ -105,12 +105,10 @@ _.each(eventData, function(activity){
     + "<span class='octicon octicon-repo dashboard-event-icon'></span>"
     + "</div>"//close icon wrapper
     + "<div class='actorInfo'>"
-    + "<a href='"
-    + "https://github.com/russpate"
-    + "'>"
+    + "<a href='https://github.com/russpate'>"
     + activity.actor.login
-    + " created repository "
     + "</a>"
+    + " created repository "
     + "<span>"
     + "<a href='#'>"
     + activity.repo.name

@@ -1,8 +1,29 @@
-.create{
-  .actorAvatarBig{
+.push{
+  .actorAvatar{
     width:50px;
     img{
       width:100%;
     }
   }
+}
+.pushDescription{
+  .actorAvatar{
+    img{
+      width:50%;
+    }
+  }
+}
+.createRepo .icon,
+.createBranch .icon {
+    width: auto;
+    color: gray;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+}
+.createRepo{
+  .actorInfo {
+    display: inline-block;
+    width: 80%;
+}
 }
