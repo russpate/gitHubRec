@@ -1,29 +1,113 @@
 .push{
-  .actorAvatar{
-    width:50px;
+  .event{
+    padding:12px 0 10px 0;
+  }
+  .actorAvatarBig{
+    width:30px;
+    display:inline-block;
+    margin-right:8px;
     img{
       width:100%;
+      border-radius:15%;
     }
+  }
+  .actorAvatarSmall{
+    width:15px;
+    display:inline-block;
+    margin-right:8px;
+    vertical-align:middle;
+    img{
+      width:100%;
+      border-radius:15%;
+    }
+  }
+  .actorInfo{
+    font-weight: bold;
+    font-size: 14px;
+    width: 86%;
+    display: inline-block;
+  }
+  .createdAt{
+    font-weight:400;
+    margin: 0;
+    display: inline-block;
+  }
+  .icon{
+    width:8%;
+    display:inline-block;
+    vertical-align:top;
+  }
+  .dashboard-event-icon{
+    font-size:30px;
+    color:#bbb;
+    padding:13px;
+    padding-right:5px;
   }
 }
 .pushDescription{
+  display: inline-block;
+  vertical-align: top;
   .actorAvatar{
     img{
       width:50%;
     }
   }
 }
-.createRepo .icon,
-.createBranch .icon {
+.commitMessage {
+    font-weight: 400;
+    color: #666;
+    font-size: 13px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.head{
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+  font-weight:400;
+}
+
+.createRepo,
+.createBranch {
+  font-size:13px;
+  color:#666;
+  .icon{
     width: auto;
-    color: gray;
+    color: #bbb;
     font-size: 14px;
     display: inline-block;
     vertical-align: top;
+    margin-right:10px;
+    padding:20px;
+    padding-right:5px;
+  }
 }
 .createRepo{
   .actorInfo {
     display: inline-block;
     width: 80%;
+    padding:20px 0 25px 0;
 }
+}
+.createBranch{
+  .info {
+    display: inline-block;
+    width: 80%;
+    padding:20px 0 25px 0;
+}
+}
+.wrap {
+    border-bottom: 1px solid #eee;
+}
+.createdAt {
+    display: inline-block;
+    color: #bbb;
+    font-size: 12px;
+    margin-left:10px;
+}
+span.branch {
+    background: #E0F0F9;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }

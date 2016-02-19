@@ -85,7 +85,7 @@ _.each(eventData, function(activity){
     + activity.actor.login
     + "</a>"
     + " created branch "
-    + "<span>"
+    + "<span class='branch'>"
     + "<a href='#'>"
     + activity.payload.ref
     + "</a>"
@@ -126,10 +126,11 @@ _.each(eventData, function(activity){
     + "<div class='icon'>"
     + "<span class='octicon octicon-git-commit dashboard-event-icon'></span>"
     + "</div>"//close icon wrapper
+    + "<div class='actorInfo'>"
     + "<div class='createdAt'>"
     + moment.utc(activity.created_at).fromNow()
     + "</div>"//createdAt
-    + "<div class='actorInfo'>"
+    + "<div class='pushInfo'>"
     + "<a href='https://github.com/russpate'>"
     + activity.actor.login
     + "</a>"
@@ -141,24 +142,27 @@ _.each(eventData, function(activity){
     + "<a href='#'>"
     + activity.repo.name
     + "</a>"
-    + "<div class='createdAt'>"
-    + moment.utc(activity.created_at).fromNow()
-    + "</div>"//createdAt
-    + "</div>"//actorInfo
-    + "<div class='actorAvatar'>"
+    + "</div>"//pushInfo
+    + "<div class='actorAvatarBig'>"
     + "<img src='"
     + activity.actor.avatar_url
     + "'/>"
     + "</div>"//actorAvatar
     + "<div class='pushDescription'>"
-    + "<div class='actorAvatar'>"
+    + "<div class='actorAvatarSmall'>"
     + "<img src='"
     + activity.actor.avatar_url
     + "'/>"
     + "</div>"//actorAvatar
+    + "<a class = 'head' href='#'>"
     + activity.payload.head.slice(-9)
-    + activity.message
+    + "</a>"
+    + " "
+    + "<div class='commitMessage'>"
+    + activity.payload.commits[0].message
+    + "</div>"
     + "</div>"//pushDescription
+    + "</div>"//actorInfo
     + "</div>"//event wrapper
     + "</div>"//wrap push
   }
