@@ -37,20 +37,22 @@ a {
 .active {
   display: block; }
 
-.tab {
-  margin-bottom: -1px; }
-  .tab a {
-    color: gray; }
+.tab a {
+  color: gray; }
 
 .activeTab {
   border: 1px solid #eee;
   border-radius: 3px 3px 0 0;
   border-bottom: 1px solid white;
   background-color: white;
-  border-bottom: 0;
-  margin-bottom: -1px; }
+  border-bottom: 0; }
   .activeTab a {
     color: #333; }
+
+.create .actorAvatarBig {
+  width: 50px; }
+  .create .actorAvatarBig img {
+    width: 100%; }
 
 .profileAsideWrap {
   width: 100%; }
@@ -98,6 +100,7 @@ a:hover {
   .tabsWrapper button {
     position: relative;
     right: 0;
+    top: -10px;
     display: inline-block;
     padding: 3px 12px;
     font-size: 13px;
@@ -123,11 +126,11 @@ a:hover {
 
 .tabsLeft {
   width: 84.5%;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: -1px; }
   .tabsLeft li {
     display: inline-block;
     list-style: none;
-    margin-right: 20px;
     font-size: 14px;
     vertical-align: middle;
     padding: 10px; }
@@ -197,7 +200,13 @@ header .gitSearch {
 
 header .littleAv img {
   width: 20px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  border-radius: 3px; }
+
+.contributions {
+  width: 100%; }
+  .contributions img {
+    width: 100%; }
 
 .searchAndFilter {
   position: relative;

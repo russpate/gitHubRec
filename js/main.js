@@ -72,15 +72,103 @@ $('.repoDataWrap').append(fullRepoData);
 //
 //
 //
-
-var fullUserData = "";
-_.each(eventData, function(item){
-
-  fullUserData += item.actor;
+var allActivity = "";
+_.each(eventData, function(activity){
+  if (activity.type === "create" && activity.payload.ref_type === "branch"){
+    allActivity +=
+    "<div class='wrap createBranch'>"
+    + "<div class='event'>"
+    + "<div class='icon'>"
+    + "<span class='octicon octicon-git-branch dashboard-event-icon'></span>"
+    + "</div>"//close icon wrapper
+    + "<div class='info'>"
+    + "<a href='https://github.com/russpate'>"
+    + activity.actor.login
+    + "</a>"
+    + " created branch "
+    + "<span>"
+    + "<a href='#'>"
+    + activity.payload.ref
+    + "</a>"
+    + "</span>"
+    + " at "
+    + activity.repo.name
+    + "<div class='createdAt'>"
+    + moment.utc(activity.created_at).fromNow()
+    + "</div>"//createdAt
+    + "</div>"//info
+    + "</div>"//event wrapper
+    + "</div>"//wrap createBranch
+  } else if (activity.type === "create" && activity.payload.ref_type === "repo") {
+    allActivity +=
+    "<div class='wrap createRepo'>"
+    + "<div class='event'>"
+    + "<div class='icon'>"
+    + "<span class='octicon octicon-repo dashboard-event-icon'></span>"
+    + "</div>"//close icon wrapper
+    + "<div class='actorInfo'>"
+    + "<a href='"
+    + "https://github.com/russpate"
+    + "'>"
+    + activity.actor.login
+    + " created repository "
+    + "</a>"
+    + "<span>"
+    + "<a href='#'>"
+    + activity.repo.name
+    + "</a>"
+    + "</span>"
+    + "<div class='createdAt'>"
+    + moment.utc(activity.created_at).fromNow()
+    + "</div>"//createdAt
+    + "</div>"//actorInfo
+    + "</div>"//event wrapper
+    + "</div>"//wrap createRepo
+  } else if (activity.type === "push"){
+    allActivity +=
+    "<div class='wrap push'>"
+    + "<div class='event'>"
+    + "<div class='icon'>"
+    + "<span class='octicon octicon-git-commit dashboard-event-icon'></span>"
+    + "</div>"//close icon wrapper
+    + "<div class='createdAt'>"
+    + moment.utc(activity.created_at).fromNow()
+    + "</div>"//createdAt
+    + "<div class='actorInfo'>"
+    + "<a href='https://github.com/russpate'>"
+    + activity.actor.login
+    + "</a>"
+    + " pushed to "
+    + "<a href='#'>"
+    + activity.payload.ref
+    + "</a>"
+    + " at "
+    + "<a href='#'>"
+    + activity.repo.name
+    + "</a>"
+    + "<div class='createdAt'>"
+    + moment.utc(activity.created_at).fromNow()
+    + "</div>"//createdAt
+    + "</div>"//actorInfo
+    + "<div class='actorAvatar'>"
+    + "<img src='"
+    + activity.actor.avatar_url
+    + "'/>"
+    + "</div>"//actorAvatar
+    + "<div class='pushDescription'>"
+    + "<div class='actorAvatar'>"
+    + "<img src='"
+    + activity.actor.avatar_url
+    + "'/>"
+    + "</div>"//actorAvatar
+    + activity.payload.head.slice(-9)
+    + activity.message
+    + "</div>"//pushDescription
+    + "</div>"//event wrapper
+    + "</div>"//wrap push
+  }
 });
-
-
-$('.public').append(fullUserData);
+$('.public').append(allActivity);
 
 //
 //
@@ -107,7 +195,6 @@ tabItem.on("click", function (event) {
   $(this).addClass('activeTab');
 
   var selectedTab = "." + $(this).attr('rel');
-  console.log(selectedTab);
   $(selectedTab).siblings('.section').removeClass('active');
   $(selectedTab).addClass('active');
 });
